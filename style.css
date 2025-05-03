@@ -1,0 +1,212 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('assets/bg.jpg') no-repeat center center fixed;
+	object-fit: fill;
+    background-color: rgba(7, 22, 103, 0.5);
+    background-blend-mode: darken;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+.fish {
+    height: 70px;
+    width: 90px;
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    z-index: 100;
+}
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 400px; 
+	width: 80px;   
+	background: radial-gradient(rgb(80, 166, 194) 50%, blue);
+	border: 5px solid black;
+}
+.score, .high-score {
+    position: fixed;
+    z-index: 10;
+    height: 5vh;
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.score {
+    top: 10px;
+    left: 10px;
+}
+.high-score {
+    top: 10px;
+    right: 10px;
+}
+.score_val {
+	color: gold;
+	font-weight: bold;
+}
+@media only screen and (max-width: 1080px) {
+    .message {
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score {
+		font-size: 8vh;
+	}
+	.fish {
+        width: 60px;
+        height: 50px;
+	}
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background-color: transparent;
+    color: white;
+    border: 5px solid darkblue;
+    background: linear-gradient(rgb(0, 0, 0), transparent);
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: none;
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    font-size: 5vh;
+}
+.start-button, 
+.modal-content .play-again-button, 
+.mute-button {
+    border: 2px solid darkblue;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+}
+.start-button:hover, 
+.modal-content .play-again-button:hover, 
+.mute-button:hover {
+    background-color: darkblue;
+    color: white;
+}
+.modal-content .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .background {
+        background-size: cover;
+    }
+    .fish {
+        height: 50px;
+        width: 70px;
+        top: 35vh;
+        left: 25vw;
+    }
+    .score, .high-score {
+        height: 4vh;
+        font-size: 2.5vh;
+        padding: 3px;
+    }
+    .modal-content {
+        width: 80%;
+        font-size: 3vh;
+        padding: 20px;
+    }
+    .start-button, .modal-content .play-again-button, .mute-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .modal-content .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .fish {
+        height: 30px;
+        width: 50px;
+        top: 30vh;
+        left: 20vw;
+    }
+    .score, .high-score {
+        height: 3.5vh;
+        font-size: 2vh;
+        padding: 2px;
+    }
+    .modal-content {
+        width: 90%;
+        font-size: 2.5vh;
+        padding: 15px;
+    }
+    .start-button, .modal-content .play-again-button, .mute-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .modal-content .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.modal-content h2 {
+    color: gold; 
+}
+
+.modal-content p {
+    color: lightblue; 
+}
+
+.score_title, .score_val {
+    color: lime; 
+}
+
+.high-score {
+    color: orange; 
+}
